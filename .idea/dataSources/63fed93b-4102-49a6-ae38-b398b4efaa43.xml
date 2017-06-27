@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="school@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="school">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="firstdata"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="course"/>
+    <table id="9" parent="2" name="score"/>
+    <table id="10" parent="2" name="student"/>
+    <table id="11" parent="2" name="teacher"/>
+    <column id="12" parent="8" name="cno">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="8" name="cname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="8" name="tno">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="15" parent="8" name="tno">
+      <ColNames>tno</ColNames>
+    </index>
+    <key id="16" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="17" parent="8" name="course_ibfk_1">
+      <ColNames>tno</ColNames>
+      <RefSchemaName>school</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>tno</RefColNames>
+    </foreign-key>
+    <column id="18" parent="9" name="sno">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="9" name="cno">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="9" name="degree">
+      <Position>3</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <index id="21" parent="9" name="cno">
+      <ColNames>cno</ColNames>
+    </index>
+    <key id="22" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sno
+cno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="23" parent="9" name="score_ibfk_1">
+      <ColNames>sno</ColNames>
+      <RefSchemaName>school</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>sno</RefColNames>
+    </foreign-key>
+    <foreign-key id="24" parent="9" name="score_ibfk_2">
+      <ColNames>cno</ColNames>
+      <RefSchemaName>school</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>cno</RefColNames>
+    </foreign-key>
+    <column id="25" parent="10" name="sno">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="10" name="sname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="10" name="ssex">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="10" name="sbirthday">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="29" parent="10" name="class">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="30" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="11" name="tno">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="tname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="tage">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="11" name="tbirthday">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="35" parent="11" name="prof">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="36" parent="11" name="depart">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tno</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
