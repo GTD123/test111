@@ -6,12 +6,7 @@ package com.example.hello.Entity;
 public class HtmlFilter {
 
     public static String filter(String message) {
-        System.out.println("hello,world");
-        System.out.println("hello,world");
-        System.out.println("hello,world");
-        System.out.println("hello,world");
-        System.out.println("hello,world");
-        System.out.println("hello,world");
-        System.out.println("hello,world");
+        System.out.println("hello,piaopiao");
+
     }
 }
