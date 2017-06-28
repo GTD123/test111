@@ -7,5 +7,11 @@ public class HtmlFilter {
 
     public static String filter(String message) {
         System.out.println("hello,world");
+        System.out.println("hello,world");
+        System.out.println("hello,world");
+        System.out.println("hello,world");
+        System.out.println("hello,world");
+        System.out.println("hello,world");
+        System.out.println("hello,world");
     }
 }
